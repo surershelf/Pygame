@@ -6,7 +6,7 @@ from random import randint
 pygame.init()
 
 musica_de_fundo = pygame.mixer.music.load(
-    'musicas/X2Download.app - Let It Happen - Guitar Riff Cover (Attempt 2) (128 kbps).mp3')
+    'musicas/musicas_Tame Impala - Let It Happen(best part)_laAKzlMWmzk.mp3')
 pygame.mixer.music.play(-1)  # para tocar a musica de fundo o -1 faz rodar em loop
 pygame.mixer.music.set_volume(0.1)  # Defina o volume para 0.1 (10%)
 
@@ -14,9 +14,9 @@ barulho_colisao = pygame.mixer.Sound(
     'musicas/Bass Drop - Sound Effect (HD)-YoutubeConvert.cc.wav')  # sound effect para quando tocar no objeto
 barulho_colisao.set_volume(0.06)  # Defina o volume para 0.06 (06%)
 
-fudeu=pygame.mixer.Sound(
-    'musicas/TA FUDIDO FILHO DA PUTA EU VOU LHE PEGAR (UDYR)-YoutubeConvert.cc.wav')
-fudeu.set_volume(0.07)
+morrer=pygame.mixer.Sound(
+    'musicas/musicas_Huh sound effect.wav')
+morrer.set_volume(0.07)
 
 largura = 1080
 altura = 720
@@ -138,7 +138,7 @@ while True:  # onde coloca o script do jogo para rodar
         while morreu:
 
             if not pygame.mixer.get_busy():
-                fudeu.play()
+                morrer.play()
             screen.fill((255,255,255))
 
             for event in pygame.event.get():
